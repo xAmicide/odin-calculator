@@ -1,0 +1,145 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-box">
+        <div class="previous-input"></div>
+        <div class="current-input"></div>
+      </div>
+      <div class="num-operator-box">
+        <div class="box operator">
+          <span>(</span>
+        </div>
+        <div class="box operator">
+          <span>)</span>
+        </div>
+        <div class="box operator">
+          <span>%</span>
+        </div>
+        <div class="box operator">
+          <span>AC</span>
+        </div>
+        <div class="box num">
+          <span>7</span>
+        </div>
+        <div class="box num">
+          <span>8</span>
+        </div>
+        <div class="box num">
+          <span>9</span>
+        </div>
+        <div class="box operator">
+          <span>÷</span>
+        </div>
+        <div class="box num">
+          <span>4</span>
+        </div>
+        <div class="box num">
+          <span>5</span>
+        </div>
+        <div class="box num">
+          <span>6</span>
+        </div>
+        <div class="box operator">
+          <span>x</span>
+        </div>
+        <div class="box num">
+          <span>1</span>
+        </div>
+        <div class="box num">
+          <span>2</span>
+        </div>
+        <div class="box num">
+          <span>3</span>
+        </div>
+        <div class="box operator">
+          <span>-</span>
+        </div>
+        <div class="box num">
+          <span>0</span>
+        </div>
+        <div class="box num">
+          <span>.</span>
+        </div>
+        <div class="box submit">
+          <span>=</span>
+        </div>
+        <div class="box operator">
+          <span>+</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: black;
+    width: 400px;
+    height: 600px;
+    border-radius: 8px;
+  }
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15.12%;
+    width: 96%;
+    margin-top: 10px;
+    background: white;
+    border-radius: 8px;
+  }
+  .previous-input {
+    margin-top: 8px;
+    border-bottom: black dotted;
+    opacity: 0.4;
+    height: 27%;
+    width: 96%;
+  }
+
+  .num-operator-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    height: 80%;
+    width: 96%;
+    background: white;
+    border-radius: 8px;
+  }
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    background: gray;
+    width: 90px;
+    height: 90px;
+    border-radius: 4px;
+    font-size: 48px;
+  }
+  .operator {
+    background-color: lightslategray;
+  }
+  .submit {
+    background-color: lightblue;
+  }
+  .num {
+    background-color: lightgrey;
+  }
+</style>
