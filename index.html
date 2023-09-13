@@ -7,20 +7,23 @@
   <body>
     <div class="container">
       <div class="input-box">
-        <div class="previous-input"></div>
-        <div class="current-input"></div>
+        <div class="previous-input">
+          <span id="operator-input"></span>
+          <span id="previous-input"></span>
+        </div>
+        <div class="current-input" id="current-input"></div>
       </div>
       <div class="num-operator-box">
         <div class="box operator">
-          <span>(</span>
+          <span></span>
         </div>
         <div class="box operator">
-          <span>)</span>
+          <span></span>
         </div>
         <div class="box operator">
           <span>%</span>
         </div>
-        <div class="box operator">
+        <div class="box" id="clear">
           <span>AC</span>
         </div>
         <div class="box num">
@@ -32,7 +35,7 @@
         <div class="box num">
           <span>9</span>
         </div>
-        <div class="box operator">
+        <div class="box operator" name="DIVIDE">
           <span>÷</span>
         </div>
         <div class="box num">
@@ -44,7 +47,7 @@
         <div class="box num">
           <span>6</span>
         </div>
-        <div class="box operator">
+        <div class="box operator" name="MULTIPLY">
           <span>x</span>
         </div>
         <div class="box num">
@@ -56,25 +59,26 @@
         <div class="box num">
           <span>3</span>
         </div>
-        <div class="box operator">
+        <div class="box operator" name="SUBTRACT">
           <span>-</span>
         </div>
         <div class="box num">
           <span>0</span>
         </div>
-        <div class="box num">
+        <div class="box period" id="period">
           <span>.</span>
         </div>
-        <div class="box submit">
+        <div class="box submit" id="submit">
           <span>=</span>
         </div>
-        <div class="box operator">
+        <div class="box operator" name="ADD">
           <span>+</span>
         </div>
       </div>
     </div>
   </body>
 </html>
+<script src="app.js"></script>
 
 <style>
   body {
@@ -95,7 +99,7 @@
   .input-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
     height: 15.12%;
     width: 96%;
     margin-top: 10px;
@@ -103,11 +107,13 @@
     border-radius: 8px;
   }
   .previous-input {
+    display: flex;
+    justify-content: center;
     margin-top: 8px;
     border-bottom: black dotted;
-    opacity: 0.4;
+    border-color: rgba(0, 0, 0, 0.4);
     height: 27%;
-    width: 96%;
+    width: 100%;
   }
 
   .num-operator-box {
@@ -133,7 +139,8 @@
     border-radius: 4px;
     font-size: 48px;
   }
-  .operator {
+  .operator,
+  #clear {
     background-color: lightslategray;
   }
   .submit {
@@ -141,5 +148,23 @@
   }
   .num {
     background-color: lightgrey;
+  }
+  .period {
+    background-color: lightgrey;
+  }
+  .input-box {
+    overflow: scroll;
+  }
+  .current-input {
+    font-size: 42px;
+  }
+  #previous-input {
+    margin-left: auto;
+    padding-right: 10px;
+    opacity: 0.4;
+  }
+  #operator-input {
+    padding-left: 10px;
+    opacity: 1;
   }
 </style>
