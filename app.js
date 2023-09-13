@@ -157,8 +157,7 @@ body.addEventListener("keypress", function (event) {
   if (Number.isInteger(parseInt(event.key))) {
     numTemp.push(event.key);
     cur_input.innerText = numTemp.join("");
-  }
-  if ((event.key = ".")) {
+  } else if (event.key == ".") {
     if (!numTemp.includes(".")) {
       numTemp.push(".");
       cur_input.innerText = numTemp.join("");
