@@ -164,4 +164,15 @@ body.addEventListener("keypress", function (event) {
       cur_input.innerText = numTemp.join("");
     }
   }
+  if (event) {
+    return 0;
+  }
+});
+
+body.addEventListener("keydown", function (event) {
+  const key = event.key; // const {key} = event; ES6+
+  if (key === "Backspace" || key === "Delete") {
+    numTemp.pop();
+    cur_input.innerText = numTemp.join("");
+  }
 });
