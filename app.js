@@ -151,3 +151,17 @@ period.addEventListener("click", function () {
     cur_input.innerText = numTemp.join("");
   }
 });
+
+let body = document.querySelector("body");
+body.addEventListener("keypress", function (event) {
+  if (Number.isInteger(parseInt(event.key))) {
+    numTemp.push(event.key);
+    cur_input.innerText = numTemp.join("");
+  }
+  if ((event.key = ".")) {
+    if (!numTemp.includes(".")) {
+      numTemp.push(".");
+      cur_input.innerText = numTemp.join("");
+    }
+  }
+});
